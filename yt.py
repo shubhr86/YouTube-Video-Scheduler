@@ -21,10 +21,10 @@ def load_default_description():
     return ""
 
 # Folder paths
-VIDEO_FOLDER = "E:\\Youtube\\shorts"
+VIDEO_FOLDER = "E:\\Youtube\\shorts" # here the videos directory change according to yours
 LOG_FILE = "uploaded_videos.txt"  # Track uploaded videos
 
-# Playlist links or Other link you want to share 
+# Playlist links or Other link you want to share , can change according to yours
 PLAYLIST_LINKS = """
 https://www.youtube.com/watch?v=TidrSMPNKlA&list=PLZi1rrttirMnEmncSGfQ7kmk-3J20IPLj
 https://youtu.be/fnoEJ_nDRco
@@ -32,10 +32,11 @@ https://youtube.com/shorts/Ab_Vbdg9w4c?feature=share
 """
 
 # Scheduling parameters
+
 IST_TO_UTC_OFFSET = datetime.timedelta(hours=-5, minutes=-30)
-START_DATE = datetime.datetime(2025, 3, 29, 18, 0) - IST_TO_UTC_OFFSET
+START_DATE = datetime.datetime(2025, 3, 29, 18, 0) - IST_TO_UTC_OFFSET #can change the date and time from here
 START_DATE = START_DATE.replace(tzinfo=datetime.timezone.utc)
-TIME_GAP_DAYS = 2
+TIME_GAP_DAYS = 2 # gap between the videos to schedule
 
 # Load default description
 DEFAULT_DESCRIPTION = load_default_description()
@@ -119,7 +120,7 @@ def main():
         print("Video folder does not exist!")
         return
     
-    video_files = [f for f in os.listdir(VIDEO_FOLDER) if f.lower().endswith((".mp4", ".mkv", ".avi", ".mov"))]
+    video_files = [f for f in os.listdir(VIDEO_FOLDER) if f.lower().endswith((".mp4", ".mkv", ".avi", ".mov"))] # check to upload only videos
     if not video_files:
         print("No videos available for scheduling.")
         return
