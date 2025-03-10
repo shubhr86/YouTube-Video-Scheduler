@@ -26,9 +26,7 @@ LOG_FILE = "uploaded_videos.txt"  # Track uploaded videos
 
 # Playlist links or Other link you want to share , can change according to yours
 PLAYLIST_LINKS = """
-https://www.youtube.com/watch?v=TidrSMPNKlA&list=PLZi1rrttirMnEmncSGfQ7kmk-3J20IPLj
-https://youtu.be/fnoEJ_nDRco
-https://youtube.com/shorts/Ab_Vbdg9w4c?feature=share
+
 """
 
 # Scheduling parameters
